@@ -11,9 +11,7 @@ export const Contacts = ({ contacts, onDelete }) => {
       {contacts.map(({ id, name, number }) => {
         return (
           <StyledItem key={id}>
-            <StyledText>
-              {name}: {number}
-            </StyledText>
+            <StyledText>{name + ': ' + number}</StyledText>
             <StyledButton onClick={() => onDelete(id)}>Delete</StyledButton>
           </StyledItem>
         );
